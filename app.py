@@ -91,10 +91,10 @@ if submit:
         st.stop()
 
     score = accuracy_score(answer_df["class"], df["class"])
-    st.markdown(f"현재 점수: {round(score, 4) * 100}%")
     write_score(nickname, score)
     st.rerun()
 
 
 if st.session_state.scores is not None:
+    st.subheader("현재 랭킹")
     st.write(st.session_state.scores)
