@@ -30,7 +30,7 @@ supabase_client = init_supabase()
 
 @st.cache_resource
 def load_answer_df():
-    return pd.read_csv("./data/mushroom_answer.csv")
+    return pd.read_csv("./data/mushrooms_answer.csv")
 
 
 def write_score(nickname: str, score: float):
